@@ -1,1 +1,2 @@
-# aladip_metad
+# Gromacs patched with PLUMED
+
