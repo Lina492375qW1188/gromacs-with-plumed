@@ -1,0 +1,32 @@
+COORDINATIONNUMBER ...
+   LABEL=coord
+   SPECIES=1-512
+   SWITCH={CUBIC D_0=0.5 D_MAX=0.55}
+   MORE_THAN={RATIONAL R_0=5.0 D_MAX=5.5}
+   LOWMEM
+... COORDINATIONNUMBER
+
+
+METAD ...
+   LABEL=metad
+   ARG=coord.morethan
+   SIGMA=0.50
+   HEIGHT=0.01 
+   BIASFACTOR=5 
+   TEMP=80.7 
+   PACE=5000
+   GRID_MIN=0
+   GRID_MAX=512
+   GRID_BIN=100 
+   CALC_RCT 
+   ACCELERATION
+... METAD
+
+
+PRINT ...
+ARG=coord.morethan,meta.bias,meta.acc
+STRIDE=1
+FILE=COLVAR
+... PRINT
+
+ENDPLUMED
