@@ -1,3 +1,6 @@
+# Restart simulation. This command will append results of new simulations to the same output files, e.g. COLVAR.
+# RESTART
+
 COORDINATIONNUMBER ...
    LABEL=coord
    SPECIES=1-512
@@ -24,8 +27,8 @@ METAD ...
 
 
 PRINT ...
-ARG=coord.morethan,meta.bias,meta.acc
-STRIDE=1
+ARG=coord.morethan,metad.bias,metad.acc
+STRIDE=200
 FILE=COLVAR
 ... PRINT
 
